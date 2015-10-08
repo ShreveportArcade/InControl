@@ -1,14 +1,12 @@
-Temp/*
-Build/*
-obj/*
-
-*.pidb
-*.userprefs
 .DS_Store
-Library/metadata/*
+
+Assets/_*
+build/*
+builds/*
+capture/*
+Assembly-*
 Library/*
+Temp/*
 
-/Assets/AssetStoreTools/
-/Assets/AssetStoreTools.meta
-
-/Documentation/
+*.sln
+*.userprefs
