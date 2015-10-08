@@ -4,9 +4,6 @@ using UnityEngine;
 namespace InControl {
 public class InputControl {
 
-	public delegate void OnInputChanged(InputControl inputControl);
-	public static event OnInputChanged onInputChanged = delegate {};
-
 	public int player = -1;
 	public static readonly InputControl Null = new InputControl( "NullInputControl" );
 
@@ -32,6 +29,13 @@ public class InputControl {
 	public InputControl( string handle, InputControlType target ) {
 		Handle = handle;
 		Target = target;
+	}
+
+
+	public InputControl( string handle, InputControlType target, int player) {
+		Handle = handle;
+		Target = target;
+		this.player = player;
 	}
 
 
@@ -72,7 +76,6 @@ public class InputControl {
 	internal void PostUpdate( ulong updateTick ) {
 		thisState = tempState;
 		if (thisState != lastState) {
-			onInputChanged(this);
 			UpdateTick = updateTick;
 		}
 	}
