@@ -1,10 +1,6 @@
 ## Description
 
-InControl is an input manager for Unity3D that standardizes input mappings across various platforms for common controllers.
-
-Documentation is available at: [http://www.gallantgames.com/incontrol](http://www.gallantgames.com/incontrol)
-
-InControl is also [available on the Unity Asset Store](http://u3d.as/6mr) for a modest price. If you find this project beneficial, please consider supporting its ongoing development. You'll also have the convenience of easy installation and updates right from the Unity Editor.
+InControl is an input manager for Unity3D that standardizes input mappings across various platforms for common controllers. This is a fork of [Patrick Hogan's](http://github.com/pbhogan) [InControl](https://github.com/pbhogan/InControl) from Mar 26, 2014 when the project was still licensed under [MIT](http://www.opensource.org/licenses/mit-license.php). OUYA support has been dropped in this fork.
 
 ## Features
 
@@ -16,11 +12,10 @@ InControl is also [available on the Unity Asset Store](http://u3d.as/6mr) for a 
 
 ## Supports
 
-* Xbox 360 controller on Windows, Mac and OUYA.
-* Playstation 3 controller on Windows, Mac and OUYA.
+* Xbox 360 controller on Windows and Mac.
+* Playstation 3 controller on Windows and Mac.
 * Playstation 4 controller on Windows, Mac and Linux.
 * Apple MFi controller on iOS 7 and above.
-* OUYA controller on OUYA and Windows.
 * Logitech F310 on Windows and Mac.
 * Logitech Dual Action on Windows and Mac.
 * Mad Catz FPS Pro on Mac.
@@ -29,9 +24,3 @@ InControl is also [available on the Unity Asset Store](http://u3d.as/6mr) for a 
 * Keyboard and Mouse support on Windows, Mac and Linux.
 * Various other Xbox 360 clones are supported also.
 * XInput support on Windows (with haptic feedback!)
-
-## Meta
-
-Handcrafted by Patrick Hogan [[twitter](http://twitter.com/pbhogan) &bull; [github](http://github.com/pbhogan) &bull; [website](http://www.gallantgames.com)]
-
-Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
