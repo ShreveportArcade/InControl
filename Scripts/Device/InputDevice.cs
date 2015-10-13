@@ -90,11 +90,9 @@ public class InputDevice {
 				// This only really applies to analog controls.
 				if (control.RawValue.HasValue) {
 					control.UpdateWithValue( control.RawValue.Value, updateTick );
-					onInputChanged(p, this, control);
 				}
 				else if (control.PreValue.HasValue) {
 					control.UpdateWithValue( ProcessAnalogControlValue( control, deltaTime ), updateTick );
-					onInputChanged(p, this, control);
 				}
 
 				control.PostUpdate( updateTick );
@@ -102,6 +100,9 @@ public class InputDevice {
 				if (control.HasChanged) {
 					onInputChanged(p, this, control);
 					LastChangeTick = updateTick;
+				}
+				else if (control.Obverse != null) {
+					onInputChanged(p, this, control);
 				}
 
 			}
