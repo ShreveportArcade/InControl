@@ -10,19 +10,20 @@ namespace InControl
 	{
 		public bool  State;
 		public float Value;
-
+		public float threshold;
 
 		public void Reset()
 		{
 			Value = 0.0f;
 			State = false;
+			threshold = 0.5f;
 		}
 
 
 		public void Set( float value )
 		{
 			Value = value;
-			State = !Mathf.Approximately( value, 0.0f );
+			State = Mathf.Abs(value) > threshold;
 		}
 
 

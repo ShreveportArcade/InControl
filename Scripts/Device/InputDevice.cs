@@ -6,6 +6,7 @@ namespace InControl {
 public class InputDevice {
 	public delegate void OnInputChanged(int player, InputDevice inputDevice, InputControl inputControl);
 	public static event OnInputChanged onInputChanged = delegate {};
+	public static event OnInputChanged onInputUpdated = delegate {};
 
 	public static readonly InputDevice Null = new InputDevice( "NullInputDevice" );
 
@@ -33,6 +34,7 @@ public class InputDevice {
 	public InputControl GetControl( Enum inputControlType, int player = -1 ) {
 		InputControlType controlType = (InputControlType)inputControlType;
 		var control = Controls.Find(c => c.Target == controlType && c.player == player);
+		if (control == null) control = Controls.Find(c => c.Target == controlType);
 		return control ?? InputControl.Null;
 	}
 
@@ -102,9 +104,8 @@ public class InputDevice {
 					LastChangeTick = updateTick;
 				}
 				else if (control.Obverse != null) {
-					onInputChanged(p, this, control);
+					onInputUpdated(p, this, control);
 				}
-
 			}
 		}
 	}
