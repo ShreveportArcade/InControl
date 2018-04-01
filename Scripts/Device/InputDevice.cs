@@ -103,9 +103,7 @@ public class InputDevice {
 					onInputChanged(p, this, control);
 					LastChangeTick = updateTick;
 				}
-				else if (control.Obverse != null) {
-					onInputUpdated(p, this, control);
-				}
+                onInputUpdated(p, this, control);
 			}
 		}
 	}
