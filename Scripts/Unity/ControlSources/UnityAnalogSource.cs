@@ -20,6 +20,7 @@ namespace InControl
 		public override float GetValue( InputDevice inputDevice )
 		{
 			var joystickId = (inputDevice as UnityInputDevice).JoystickId;
+            if (joystickId == 0) return 0;
 			var analogKey = GetAnalogKey( joystickId, analogId );
 			return Input.GetAxisRaw( analogKey );
 		}
